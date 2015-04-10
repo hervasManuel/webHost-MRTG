@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Muestra el tamaño de la caché
+
+nombre=`cat /proc/cpuinfo | grep "cache size" | awk '{for (i=4; i<=NF; i++) { print $i}}'` 
+echo $nombre

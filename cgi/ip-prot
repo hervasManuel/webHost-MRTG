@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra el porcentaje de paquetes IP  con protocolo desconocido
+
+ipIn=`snmpget -OvQ -v1 -c $2 $1 ipInReceives.0` 
+
+protIn=`snmpget -OvQ -v1 -c $2 $1 ipInUnknownProtos.0` 
+
+in=`expr $protIn "*" 100`
+
+inTotal=`expr $in "/" $ipIn`
+
+echo $inTotal
+echo $inTotal
+echo ip-prot
+echo ip-prot
+

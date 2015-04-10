@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Muestra el numero de conexiones TCP abiertas
+
+conexiones=`snmpget -OvQ -v1 -c public localhost tcpCurrEstab.0`
+echo $conexiones
+echo $conexiones
+echo tcp-ab
+echo tcp-ab

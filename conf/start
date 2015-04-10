@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# Parada de webHost - MRTG MONITOR en RED HAT
+#
+# Manuel Hervas Ortega - Administracion de Redes de Computadores - UCLM
+# 
+
+
+# Arranque de procesos
+
+/sbin/service snmpd restart
+/sbin/service httpd restart
+mrtg /etc/mrtg/mrtg.cfg
+
+echo webHost-MRTG se ha iniciado
+
+

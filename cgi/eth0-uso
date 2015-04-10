@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra la carga  mensajes ICMP Enviados y Recibidos
+
+ipIn=`snmpget -OvQ -v1 -c $2 $1 ipInReceives.0` 
+
+ipOut=`snmpget -OvQ -v1 -c $2 $1 ipOutRequests.0` 
+
+icmpIn=`snmpget -OvQ -v1 -c $2 $1 icmpInDatagrams.0` 
+
+icmpOut=`snmpget -OvQ -v1 -c $2 $1 icmpOutDatagrams.0` 
+
+in=`expr $icmpIn "*" 100`
+out=`expr $icmpOut "*" 100`
+
+inTotal=`expr $in "/" $ipIn` 
+outTotal=`expr $out "/" $ipOut` 
+
+echo $inTotal
+echo $outTotal
+echo icmp-carga
+echo icmp-carga
+

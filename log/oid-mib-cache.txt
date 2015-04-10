@@ -1,0 +1,6 @@
+hrSystemProcesses	1.3.6.1.2.1.25.1.6
+ssSysInterrupts	1.3.6.1.4.1.2021.11.7
+hrSystemNumUsers	1.3.6.1.2.1.25.1.5
+ssSysContext	1.3.6.1.4.1.2021.11.8
+ssSwapIn	1.3.6.1.4.1.2021.11.3
+ssSwapOut	1.3.6.1.4.1.2021.11.4

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra los mensajes SNMP de salida
+
+items=`snmpget -OvQ -v1 -c $2 $1 snmpOutPkts.0` 
+echo $items

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/dtd/xhtml11.dtd">
+<html>
+<!-- Begin Head -->
+	<head>
+		<title>Tiempo de CPU</title>
+		<meta http-equiv="refresh" content="300" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="Thu, 28 Jun 2012 10:40:20 GMT" />
+		<meta http-equiv="generator" content="MRTG 2.16.3" />
+		<meta http-equiv="date" content="Thu, 28 Jun 2012 10:40:20 GMT" />
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<!-- maxin d 90 -->
+<!-- maxout d 34 -->
+<!-- avin d 84 -->
+<!-- avout d 14 -->
+<!-- cuin d 79 -->
+<!-- cuout d 20 -->
+<!-- avmxin d 85 -->
+<!-- avmxout d 14 -->
+<!-- maxin w 90 -->
+<!-- maxout w 33 -->
+<!-- avin w 77 -->
+<!-- avout w 11 -->
+<!-- cuin w 0 -->
+<!-- cuout w 0 -->
+<!-- avmxin w 87 -->
+<!-- avmxout w 14 -->
+<!-- maxin m 90 -->
+<!-- maxout m 20 -->
+<!-- avin m 65 -->
+<!-- avout m 9 -->
+<!-- cuin m 0 -->
+<!-- cuout m 0 -->
+<!-- avmxin m 87 -->
+<!-- avmxout m 17 -->
+<!-- maxin y 39 -->
+<!-- maxout y 5 -->
+<!-- avin y 25 -->
+<!-- avout y 3 -->
+<!-- cuin y 39 -->
+<!-- cuout y 6 -->
+<!-- avmxin y 88 -->
+<!-- avmxout y 22 -->
+
+		<style type="text/css">
+			body {
+				background-color: #ffffff;
+			}
+			div {
+				border-bottom: 2px solid #aaa;
+				padding-bottom: 10px;
+				margin-bottom: 5px;
+			}
+			div h2 {
+				font-size: 1.2em;
+			}
+			div.graph img {
+				margin: 5px 0;
+			}
+			div.graph table, div#legend table {
+				font-size: .8em;
+			}
+			div.graph table td {
+				padding: 0 10px;
+				text-align: right;
+			}
+			div table .in th, div table td span.in {
+				color: #7aafff;
+			}
+			div table .out th, div table td span.out {
+				color: #1000ff;
+			}
+			div#legend th {
+				text-align: right;
+			}
+			div#footer {
+				border: none;
+				font-size: .8em;
+				font-family: Arial, Helvetica, sans-serif;
+				width: 476px;
+			}
+			div#footer img {
+				border: none;
+				height: 25px;
+			}
+			div#footer address {
+				text-align: right;
+			}
+			div#footer #version {
+				margin: 0;
+				padding: 0;
+				float: left;
+				width: 88px;
+				text-align: right;
+			}
+		</style>
+<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="1"><tr><th width="100%" align="center">Analisis de CPU</th></tr><tr><td width="100%" align="left"> <font size="5"><b>Tiempo de CPU</b></font><font size="1"><br>Porcentaje de carga de Procesos de Usuario y del Sistema</font> <hr>Nombre de la Maquina: <b><!--#exec cmd="/var/webHost-MRTG/cgi/nombre localhost public" --></b><br>Tipo de CPU: <b><!--#exec cmd="/var/webHost-MRTG/cgi/tipo" --></b><br>Estad&iacute;sticas actualizadas el  <strong>Jueves 28 de Junio de  2012  a las  12:35</strong>
+<!-- Begin `Daily' Graph (5 Minute -->
+		<div class="graph">
+			<h2>Gr&aacute;fico diario (5 minutos : Promedio)</h2>
+			<img src="graficas/tiempo-cpu-day.png" title="day" alt="day" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Usuario:</th>
+					<td>90.0 %</td>
+					<td>84.0 % </td>
+					<td>79.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Sistema:</th>
+					<td>34.0 % </td>
+					<td>14.0 % </td>
+					<td>20.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Daily' Graph (5 Minute -->
+
+<!-- Begin `Weekly' Graph (30 Minute -->
+		<div class="graph">
+			<h2>Gr&aacute;fico semanal (30 minutos : Promedio)</h2>
+			<img src="graficas/tiempo-cpu-week.png" title="week" alt="week" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Usuario:</th>
+					<td>90.0 %</td>
+					<td>77.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Sistema:</th>
+					<td>33.0 % </td>
+					<td>11.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Weekly' Graph (30 Minute -->
+
+<!-- Begin `Monthly' Graph (2 Hour -->
+		<div class="graph">
+			<h2>Gr&aacute;fico mensual (2 horas : Promedio)</h2>
+			<img src="graficas/tiempo-cpu-month.png" title="month" alt="month" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Usuario:</th>
+					<td>90.0 %</td>
+					<td>65.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Sistema:</th>
+					<td>20.0 % </td>
+					<td>9.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Monthly' Graph (2 Hour -->
+
+<!-- Begin `Yearly' Graph (1 Day -->
+		<div class="graph">
+			<h2>Gr&aacute;fico anual (1 d&iacute;a : Promedio)</h2>
+			<img src="graficas/tiempo-cpu-year.png" title="year" alt="year" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Usuario:</th>
+					<td>39.0 %</td>
+					<td>25.0 % </td>
+					<td>39.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Sistema:</th>
+					<td>5.0 % </td>
+					<td>3.0 % </td>
+					<td>6.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Yearly' Graph (1 Day -->
+</td></tr><tr><th>&nbsp;</th></tr></table>	</body>
+</html>
+

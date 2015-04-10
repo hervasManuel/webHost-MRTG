@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra el porcentaje de datagramas UDP erroneos
+
+udpIn=`snmpget -OvQ -v1 -c $2 $1 udpInDatagrams.0` 
+
+errIn=`snmpget -OvQ -v1 -c $2 $1 udpInErrors.0` 
+
+in=`expr $errIn "*" 100`
+
+inTotal=`expr $in "/" $udpIn`
+
+echo $inTotal
+echo $inTotal
+echo udp-err
+echo udp-err
+

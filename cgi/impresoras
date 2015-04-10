@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#Obtiene la lista de impresoras y el estado
+
+snmptable -Cf ! -CH -v1 -c $2 $1 hrDeviceTable | awk 'BEGIN {FS="!"} $2~/hrDevicePrinter/ {
+if($5 == "other"){estado="Otro"}else{if($5 == "unknown"){estado="Desconocido"}
+else{if($5 == "idle"){estado="Inactiva"}else{if($5 == "printing"){estado="Imprimiendo"}
+else{if($5 == "warmup"){estado="Iniciandose"}}}}}
+printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr>\n",$3,estado,$6)}'

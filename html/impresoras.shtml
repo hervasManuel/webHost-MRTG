@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Impresoras</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="style.css" type="text/css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<table border="0" cellpadding="0" cellspacing="1"><tr><th width="100%" align="center">Otros Dispositivos</th></tr>
+	<tr>
+		<td width="700" align="left"><br> <font size="5"><b>Impresoras</b></font><font size="1">
+		<br>Estado Actual de las impresoras del sistema</font> 
+		<hr>
+			<table align="center" width="600"  border=0 cellpadding="0" cellspacing="1">
+				<tr>
+					<th align="center"><b>Marca-Modelo</b></th><th align="center"><b>Estado</b></th><th align="center"><b>Causa de Error</b></th>
+				</tr>
+				<!--#EXEC CMD="/var/webHost-MRTG/cgi/impresoras localhost public" -->	
+			</table>
+			<hr>
+			<table align="center" border="0" cellpadding="2" cellspacing="1">
+				 <tr>
+				 	 <th colspan="4">Leyenda</td>
+				 </tr> 
+				 <tr> 
+				 	<td align="center" class="smalltext">0</td><td class="smalltext">Poco papel&nbsp;&nbsp;&nbsp;</td>
+					<td align="center" class="smalltext">8</td><td class="smalltext">Error en la bandeja de entrada&nbsp;&nbsp;&nbsp;</td>
+				 </tr> 
+				 <tr> 
+				 	<td align="center" class="smalltext">1</td><td class="smalltext">No hay papel&nbsp;&nbsp;&nbsp;</td>
+				  	<td align="center" class="smalltext">9</td><td class="smalltext">Error en la bandeja de salida&nbsp;&nbsp;&nbsp;</td>
+				 </tr>
+				 <tr> 
+				 	<td align="center" class="smalltext">2</td><td class="smalltext">Toner bajo&nbsp;&nbsp;&nbsp;</td> 
+					<td align="center" class="smalltext">10</td><td class="smalltext">markerSupplyMissing&nbsp;&nbsp;&nbsp;</td> 
+				</tr>
+				<tr>
+					<td align="center" class="smalltext">3</td><td class="smalltext">Sin toner&nbsp;&nbsp;&nbsp;</td>
+					<td align="center" class="smalltext">11</td><td class="smalltext">Salida casi llena&nbsp;</td>
+				 </tr> 
+				 <tr>
+					<td align="center" class="smalltext">4</td><td class="smalltext">Puerta abierta&nbsp;&nbsp;&nbsp;</td>
+					<td align="center" class="smalltext">12</td><td class="smalltext">Salida llena&nbsp;</td>
+				 </tr> 
+				 <tr>
+					<td align="center" class="smalltext">5</td><td class="smalltext">Atascada&nbsp;&nbsp;&nbsp;</td>
+					<td align="center" class="smalltext">13</td><td class="smalltext">Bandeja de entrada vac&iacute;a&nbsp;</td>
+				 </tr> 
+				 <tr>
+					<td align="center" class="smalltext">6</td><td class="smalltext">Desconectada&nbsp;&nbsp;&nbsp;</td>
+					<td align="center" class="smalltext">14</td><td class="smalltext">overduePreventMaint&nbsp;</td>
+				 </tr> 
+				 <tr>
+					<td align="center" class="smalltext">7</td><td class="smalltext">Petici&oacute;n de servicio&nbsp;&nbsp;&nbsp;</td>
+					<td align="center" class="smalltext">&nbsp;</td><td class="smalltext">&nbsp;</td>
+				 </tr> 
+			</table><br>
+			
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th>
+	</tr>
+</table>
+</BODY>
+</HTML>
+

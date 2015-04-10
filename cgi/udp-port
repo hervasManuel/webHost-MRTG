@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra el porcentaje de datagramas UDP sin puerto
+
+portIn=`snmpget -OvQ -v1 -c $2 $1 udpNoPorts.0` 
+
+udpIn=`snmpget -OvQ -v1 -c $2 $1 udpInDatagrams.0` 
+
+in=`expr $portIn "*" 100`
+
+inTotal=`expr $in "/" $udpIn` 
+
+echo $inTotal
+echo $inTotal
+echo udp-port
+echo udp-port
+

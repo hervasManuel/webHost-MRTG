@@ -1,0 +1,112 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	color: white;
+	background-color : Gray;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-bottom : 0px;
+	margin-left : 0px;
+	margin-right : 0px;
+	margin-top : 0px;
+    scrollbar-3dlight-color : #666666;
+	scrollbar-arrow-color : White;
+	scrollbar-base-color : Black;
+	scrollbar-darkshadow-color : Black;
+	scrollbar-face-color : Gray;
+	scrollbar-highlight-color : #999999;
+	scrollbar-shadow-color : #666666;
+	scrollbar-track-color :  #999999;
+	}
+
+table {
+	color : White;
+	background-color : #999999;
+}
+	
+td {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	color: Black;
+	background-color : White;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 4px;
+	padding-left: 4px;
+	}
+	
+th {
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	color: White;
+	background-color :  #84B621;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+	}
+
+a:link  {
+	text-decoration:underline;
+	color : Black;
+	background-color : White;
+    }
+	
+a:visited {
+	text-decoration:underline;
+	color : Black;
+	background-color : White;
+	}
+
+a:hover {
+	text-decoration:underline;
+	color : Red;
+	background-color : White;
+	}
+
+a:focus {
+	text-decoration:underline;
+	color : Black;
+	background-color : White;
+	}
+
+a:active {
+	text-decoration: underline;
+	color : Red;
+	background-color : White;
+	}
+
+input {
+	background-color : #FFFFFF;
+	color : #000000;
+}
+
+button {
+	background-color : #FFFFFF;
+	color : #000000;
+}
+
+.bigtext{
+   font-size: small;
+	}
+
+.normaltext{
+   font-size: x-small;
+	}
+
+.smalltext {
+	font-size: xx-small;
+}
+
+.tderror {
+	font-size: xx-small;
+	font-style: normal;
+	color: Black;
+	background-color : #FF9999;
+}

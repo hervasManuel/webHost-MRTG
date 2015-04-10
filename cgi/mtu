@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+# $3: interfaz
+
+# Muestra la MTU de la interfaz
+
+mtu=`snmpget -OvQ -v1 -c $2 $1 ifMtu.$3` 
+echo $mtu

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+# $3: interfaz
+
+# Muestra el tipo del interfaz
+
+tipo=`snmpget -OvQ -v1 -c $2 $1 ifDescr.$3` 
+echo $tipo

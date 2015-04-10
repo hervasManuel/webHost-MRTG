@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra la el porcentaje de tramas erroneas de la interfaz
+
+ifIn=`snmpget -OvQ -v1 -c $2 $1 ifInUcastPkts.2` 
+
+ifOut=`snmpget -OvQ -v1 -c $2 $1 ifOutUcastPkts.2` 
+
+ErrIn=`snmpget -OvQ -v1 -c $2 $1 ifInErrors.2` 
+
+ErrOut=`snmpget -OvQ -v1 -c $2 $1 ifOutErrors.2` 
+
+in=`expr $ErrIn "*" 100`
+out=`expr $ErrOut "*" 100`
+
+if [ $ifIn -gt 0 -a $ifOut -gt 0 ]
+then
+    inTotal=`expr $in "/" $ifIn`
+    outTotal=`expr $out "/" $ifOut`
+else
+    inTotal=0
+    outTotal=0;
+fi
+
+echo $inTotal
+echo $outTotal
+echo eth0-err
+echo eth0-err
+

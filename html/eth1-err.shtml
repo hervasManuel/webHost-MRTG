@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/dtd/xhtml11.dtd">
+<html>
+<!-- Begin Head -->
+	<head>
+		<title>Tramas Erroneas</title>
+		<meta http-equiv="refresh" content="300" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="Thu, 28 Jun 2012 10:40:28 GMT" />
+		<meta http-equiv="generator" content="MRTG 2.16.3" />
+		<meta http-equiv="date" content="Thu, 28 Jun 2012 10:40:28 GMT" />
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<!-- maxin d 5 -->
+<!-- maxout d 1 -->
+<!-- avin d 3 -->
+<!-- avout d 0 -->
+<!-- cuin d 0 -->
+<!-- cuout d 1 -->
+<!-- maxin w 10 -->
+<!-- maxout w 0 -->
+<!-- avin w 3 -->
+<!-- avout w 0 -->
+<!-- cuin w 0 -->
+<!-- cuout w 0 -->
+<!-- maxin m 3 -->
+<!-- maxout m 0 -->
+<!-- avin m 2 -->
+<!-- avout m 0 -->
+<!-- cuin m 0 -->
+<!-- cuout m 0 -->
+<!-- maxin y 0 -->
+<!-- maxout y 0 -->
+<!-- avin y 0 -->
+<!-- avout y 0 -->
+<!-- cuin y 0 -->
+<!-- cuout y 0 -->
+<!-- avmxin y 8 -->
+<!-- avmxout y 1 -->
+
+		<style type="text/css">
+			body {
+				background-color: #ffffff;
+			}
+			div {
+				border-bottom: 2px solid #aaa;
+				padding-bottom: 10px;
+				margin-bottom: 5px;
+			}
+			div h2 {
+				font-size: 1.2em;
+			}
+			div.graph img {
+				margin: 5px 0;
+			}
+			div.graph table, div#legend table {
+				font-size: .8em;
+			}
+			div.graph table td {
+				padding: 0 10px;
+				text-align: right;
+			}
+			div table .in th, div table td span.in {
+				color: #7aafff;
+			}
+			div table .out th, div table td span.out {
+				color: #1000ff;
+			}
+			div#legend th {
+				text-align: right;
+			}
+			div#footer {
+				border: none;
+				font-size: .8em;
+				font-family: Arial, Helvetica, sans-serif;
+				width: 476px;
+			}
+			div#footer img {
+				border: none;
+				height: 25px;
+			}
+			div#footer address {
+				text-align: right;
+			}
+			div#footer #version {
+				margin: 0;
+				padding: 0;
+				float: left;
+				width: 88px;
+				text-align: right;
+			}
+		</style>
+<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="1"><tr><th width="100%" align="center">Interfaz eth1</th></tr><tr><td width="100%" align="left"> <font size="5"><b>Tramas Erroneas</b></font><font size="1"><br>Entrada: Porcentaje de Tramas Ethernet recibidas con errores y no fueron entregados a los niveles superiores<br>Salida: Porcentaje de tramas que no fueron enviadas debido a errores<br>Un alto porcentaje de errores en la entrada indica errores en la linea y una gran cantidad a la salida indica problemas en nuestro hardware</font> <hr>Nombre de la Maquina: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/nombre localhost public" --></b><br>Tipo de Interfaz: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/tipoIf localhost public 3" --></b><br>Nombre del Interfaz: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/nombreIf localhost public 3" --></b><br>MTU: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/mtu localhost public 3" --></b><br>Direcci&oacute;n MAC: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/mac localhost public 3" --></b><br>Direcci&oacute;n IP: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/dirIf3 localhost public" --></b><br>M&aacute;scara de Subred: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/subredIf3 localhost public" --></b><br>Estado: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/estadoIf localhost public 3" --></b><br>Tramas Recibidas: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/ethRecibidos localhost public 3" --></b><br>Tramas Erroneas Recibidas: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/ethErrEntrada localhost public 3" --></b><br>Tramas Enviadas: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/ethEnviados localhost public 3" --></b><br>Tramas Erroneas Enviadas: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/ethErrSalida localhost public 3" --></b><br>Estad&iacute;sticas actualizadas el  <strong>Jueves 28 de Junio de  2012  a las  12:35</strong>
+<!-- Begin `Daily' Graph (5 Minute -->
+		<div class="graph">
+			<h2>Gr&aacute;fico diario (5 minutos : Promedio)</h2>
+			<img src="graficas/eth1-err-day.png" title="day" alt="day" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Entrada:</th>
+					<td>5.0 %</td>
+					<td>3.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Salida:</th>
+					<td>1.0 % </td>
+					<td>0.0 % </td>
+					<td>1.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Daily' Graph (5 Minute -->
+
+<!-- Begin `Weekly' Graph (30 Minute -->
+		<div class="graph">
+			<h2>Gr&aacute;fico semanal (30 minutos : Promedio)</h2>
+			<img src="graficas/eth1-err-week.png" title="week" alt="week" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Entrada:</th>
+					<td>10.0 %</td>
+					<td>3.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Salida:</th>
+					<td>0.0 % </td>
+					<td>0.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Weekly' Graph (30 Minute -->
+
+<!-- Begin `Monthly' Graph (2 Hour -->
+		<div class="graph">
+			<h2>Gr&aacute;fico mensual (2 horas : Promedio)</h2>
+			<img src="graficas/eth1-err-month.png" title="month" alt="month" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Entrada:</th>
+					<td>3.0 %</td>
+					<td>2.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Salida:</th>
+					<td>0.0 % </td>
+					<td>0.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Monthly' Graph (2 Hour -->
+
+<!-- Begin `Yearly' Graph (1 Day -->
+		<div class="graph">
+			<h2>Gr&aacute;fico anual (1 d&iacute;a : Promedio)</h2>
+			<img src="graficas/eth1-err-year.png" title="year" alt="year" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Entrada:</th>
+					<td>0.0 %</td>
+					<td>0.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Salida:</th>
+					<td>0.0 % </td>
+					<td>0.0 % </td>
+					<td>0.0 % </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Yearly' Graph (1 Day -->
+</td></tr><tr><th>&nbsp;</th></tr></table>	</body>
+</html>
+

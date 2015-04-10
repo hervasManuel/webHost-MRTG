@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra los paquetes ICMP de entrada de error 
+
+# Destino Inalcanzable
+items=`snmpget -OvQ -v1 -c $2 $1 icmpInDestUnreachs.0` 
+echo $items

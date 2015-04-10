@@ -1,0 +1,44 @@
+#!/bin/sh
+
+#
+# Configuracion de webHost-MRTG para monitorizar un host remoto 
+#
+# Manuel Hervas Ortega - Administracion de Redes de Computadores - UCLM
+# 
+
+# $1: IP Maquina remota
+
+
+## Modificacion de los archivos de configuracion
+
+
+# Modifica la comunidad y la direccion IP
+
+comunidad=`cat comunidad.webhost`
+ip=`cat ip.webhost`
+
+/var/webHost-MRTG/conf/rmtcfg $ip $1 $comunidad
+
+# Borra temporales
+
+rm -f /var/webHost-MRTG/conf/mrtg.cf
+
+# Guardamos la nueva configuracion
+
+echo remote > comunidad.webhost
+echo $1 > ip.webhost
+
+
+
+## Instalacion de archivos de configuracion
+
+# Configuracion de MRTG
+cp /etc/mrtg/mrtg.cfg /etc/mrtg/mrtg.cfg-bakRmt # Copia de Seguridad
+cp -f /var/webHost-MRTG/conf/mrtg.cfg /etc/mrtg/mrtg.cfg
+
+# Ejecucion
+
+kill `cat /etc/mrtg/mrtg.pid`
+mrtg /etc/mrtg/mrtg.cfg
+
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra los datagramas UDP sin puerto
+
+items=`snmpget -OvQ -v1 -c $2 $1 udpNoPorts.0` 
+
+
+echo $items

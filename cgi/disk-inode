@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: Comunidad
+
+# Obtiene el porcentaje de inodos utilizados de la particion
+
+item=`snmpget -OvQ -v1 -c $2 $1 dskPercentNode.1`
+
+echo $item

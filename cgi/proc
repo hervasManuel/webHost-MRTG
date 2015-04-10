@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: Comunidad
+
+#Obtiene la lista de procesos y el pid
+
+
+snmptable -CH -v1 -c $2 $1 hrSWRunTable |awk '{
+printf("<tr><td align=\"center\">%s</td><td align=\"center\">%s</td></tr>\n",$1,$2)}'
+

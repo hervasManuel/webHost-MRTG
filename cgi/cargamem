@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# $1: IP maquina 
+# $2: comunidad
+
+# Muestra la memoria RAM total y libre (en Bytes)
+
+# Memoria RAM Total
+total=`snmpget -OvQU -v1 -c $2 $1 memTotalReal.0`
+
+# Memoria RAM Disponible
+libre=`snmpget -OvQU -v1 -c $2 $1 memAvailReal.0`
+
+# Memoria Utilizada
+utilizada=`expr $total - $libre`
+
+utilizadaB=`expr $utilizada "*" 1024` # en bytes
+libreB=`expr $libre "*" 1024`         # en bytes
+
+echo $utilizadaB
+echo $libreB
+echo mem-real
+echo mem-real

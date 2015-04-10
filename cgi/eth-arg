@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Muestra el numero total de tramas erroneas recibidas por LAN
+cadena=`echo snmpget  -v1 -c public $1 sysDescr.0`
+#discards=`snmpget -OvQ -v1 -c public $1 ifInDiscards.2`
+#errors=`snmpget -OvQ -v1 -c public S1 ifInErrors.2`
+#total=`expr $discards + $errors`
+
+#echo $cadena
+resultado=`$cadena`
+echo $resultado
+#echo $cadena2
+
+#echo eth-err
+#echo eth-err

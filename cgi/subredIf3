@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra la mascara del interfaz eth1
+
+snmptable -CH -v1 -c $2 $1 ipAddrTable | awk '$2~/3/ {print $3}'
+
+

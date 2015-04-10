@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: Comunidad
+
+# Obtiene la cantidad de memoria RAM del sistema
+
+ram=`snmpget -OvQ -v1 -c $2 $1 hrMemorySize.0`
+
+echo $ram

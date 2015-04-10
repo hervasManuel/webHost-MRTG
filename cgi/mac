@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+# $3: interfaz
+
+# Muestra la direccion MAC del la interfaz
+
+mac=`snmpget -OvQ -v1 -c $2 $1 ifPhysAddress.$3`
+echo $mac

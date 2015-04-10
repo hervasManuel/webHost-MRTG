@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra la carga del procesador (en %)
+
+# Tiempo de procesos del usuario 
+user=`snmpget -OvQ -v1 -c public localhost ssCpuRawUser.0`
+
+# Tiempo de procesos del sistema
+system=`snmpget -OvQ -v1 -c public localhost ssCpuRawSystem.0`
+
+total=`expr $user + $system`
+userX=`expr $user "*" 100`
+systemX=`expr $system "*" 100`
+
+# Porcentaje de carga de usuario 
+cargaUser=`expr $userX "/" $total`
+
+# Porcentaje de carga del sistema
+cargaSystem=`expr $systemX "/" $total`
+
+
+echo $cargaUser
+echo $cargaSystem
+echo tiempo-cpu
+echo tiempo-cpu

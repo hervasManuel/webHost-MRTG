@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra la el porcentaje de paquetes IP descartados por direccion erronea
+
+ipIn=`snmpget -OvQ -v1 -c $2 $1 ipInReceives.0` 
+
+dirIn=`snmpget -OvQ -v1 -c $2 $1 ipInAddrErrors.0` 
+
+in=`expr $dirIn "*" 100`
+inTotal=`expr $in "/" $ipIn`
+
+echo $inTotal
+echo $inTotal
+echo ip-dir
+echo ip-dir
+

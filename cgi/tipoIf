@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+# $3: interfaz
+
+# Muestra el tipo de interfaz
+
+mtu=`snmpget -OvQ -v1 -c $2 $1 ifType.$3` 
+echo $mtu
+

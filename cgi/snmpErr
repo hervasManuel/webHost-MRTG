@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra los mensajes SNMP erroneos
+
+items1=`snmpget -OvQ -v1 -c $2 $1 snmpInBadVersions.0` 
+
+items2=`snmpget -OvQ -v1 -c $2 $1 snmpInBadCommunityNames.0` 
+
+items3=`snmpget -OvQ -v1 -c $2 $1 snmpInBadCommunityUses.0` 
+
+items4=`snmpget -OvQ -v1 -c $2 $1 snmpInASNParseErrs.0` 
+
+items5=`snmpget -OvQ -v1 -c $2 $1 snmpInTooBigs.0` 
+
+items6=`snmpget -OvQ -v1 -c $2 $1 snmpInNoSuchNames.0` 
+
+items7=`snmpget -OvQ -v1 -c $2 $1 snmpInBadValues.0` 
+
+items8=`snmpget -OvQ -v1 -c $2 $1 snmpInReadOnlys.0` 
+
+items9=`snmpget -OvQ -v1 -c $2 $1 snmpInGenErrs.0` 
+
+errors=`expr $items1 + $items2 + $items3 + $items4 + $items5 + $items6 + $items7 + $items8 + $items9`
+
+echo $errors
+

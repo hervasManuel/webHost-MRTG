@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Lista de Procesos</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="style.css" type="text/css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<table width="710" border="0" cellpadding="0" cellspacing="1"><tr><th width="100%" align="center">Analisis de CPU</th></tr>
+	<tr>
+		<td align="left"><font size="5"><b>Lista de Procesos</b></font><font size="1">
+		<br>Procesos en Ejecuci&oacute;n del sistema</font> 
+		<hr>Nombre de la Maquina: <b><!--#exec cmd="/var/webHost-MRTG/cgi/nombre localhost public" --></b>
+		<br>Tipo de CPU: <b><!--#exec cmd="/var/webHost-MRTG/cgi/tipo" --></b><hr>
+			<table width="60%" border="0" cellpadding="0" cellspacing="1" align="center">
+				<tr>
+					<th align="center"><b>PID</b></th><th align="center"><b>Nombre del Proceso</b></th>
+				</tr>
+				<!--#EXEC CMD="/var/webHost-MRTG/cgi/proc localhost public" -->
+			</table>
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th>
+	</tr>
+</table>
+</BODY>
+</HTML>
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/dtd/xhtml11.dtd">
+<html>
+<!-- Begin Head -->
+	<head>
+		<title>Memoria SWAP Utilizada / Libre</title>
+		<meta http-equiv="refresh" content="300" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="Thu, 28 Jun 2012 10:40:22 GMT" />
+		<meta http-equiv="generator" content="MRTG 2.16.3" />
+		<meta http-equiv="date" content="Thu, 28 Jun 2012 10:40:22 GMT" />
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<!-- maxin d 0 -->
+<!-- maxout d 1060106240 -->
+<!-- avin d 0 -->
+<!-- avout d 1047248926 -->
+<!-- cuin d 0 -->
+<!-- cuout d 1060106240 -->
+<!-- maxin w 1119332 -->
+<!-- maxout w 1060106240 -->
+<!-- avin w 242438 -->
+<!-- avout w 731328652 -->
+<!-- cuin w 0 -->
+<!-- cuout w 0 -->
+<!-- avmxin w 276157 -->
+<!-- avmxout w 799729269 -->
+<!-- maxin m 1092832 -->
+<!-- maxout m 1060106240 -->
+<!-- avin m 203220 -->
+<!-- avout m 613025487 -->
+<!-- cuin m 0 -->
+<!-- cuout m 0 -->
+<!-- avmxin m 280696 -->
+<!-- avmxout m 810669478 -->
+<!-- maxin y 287894 -->
+<!-- maxout y 474826983 -->
+<!-- avin y 143947 -->
+<!-- avout y 237413492 -->
+<!-- cuin y 0 -->
+<!-- cuout y 474826984 -->
+<!-- avmxin y 743424 -->
+<!-- avmxout y 530053120 -->
+
+		<style type="text/css">
+			body {
+				background-color: #ffffff;
+			}
+			div {
+				border-bottom: 2px solid #aaa;
+				padding-bottom: 10px;
+				margin-bottom: 5px;
+			}
+			div h2 {
+				font-size: 1.2em;
+			}
+			div.graph img {
+				margin: 5px 0;
+			}
+			div.graph table, div#legend table {
+				font-size: .8em;
+			}
+			div.graph table td {
+				padding: 0 10px;
+				text-align: right;
+			}
+			div table .in th, div table td span.in {
+				color: #7aafff;
+			}
+			div table .out th, div table td span.out {
+				color: #1000ff;
+			}
+			div#legend th {
+				text-align: right;
+			}
+			div#footer {
+				border: none;
+				font-size: .8em;
+				font-family: Arial, Helvetica, sans-serif;
+				width: 476px;
+			}
+			div#footer img {
+				border: none;
+				height: 25px;
+			}
+			div#footer address {
+				text-align: right;
+			}
+			div#footer #version {
+				margin: 0;
+				padding: 0;
+				float: left;
+				width: 88px;
+				text-align: right;
+			}
+		</style>
+<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="1"><tr><th width="100%" align="center">Analisis de Memoria</th></tr><tr><td width="100%" align="left"> <font size="5"><b>Utilizaci&oacute;n de Memoria SWAP</b></font><font size="1"><br>Cantidad de memoria SWAP libre y utilizada</font> <hr>Nombre de la Maquina: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/nombre localhost public" --></b><br>Memoria RAM total:       <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/ram localhost public" --></b><br>Memoria SWAP total:    <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/swap localhost public" --></b><br>Memoria Cach&eacute; total: <b><!--#EXEC CMD="/var/webHost-MRTG/cgi/cache" --></b><br>Estad&iacute;sticas actualizadas el  <strong>Jueves 28 de Junio de  2012  a las  12:35</strong>
+<!-- Begin `Daily' Graph (5 Minute -->
+		<div class="graph">
+			<h2>Gr&aacute;fico diario (5 minutos : Promedio)</h2>
+			<img src="graficas/mem-swap-day.png" title="day" alt="day" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Utilizada:</th>
+					<td>0.0 bytes</td>
+					<td>0.0 bytes </td>
+					<td>0.0 bytes </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Libre:</th>
+					<td>1011.0 Mbytes </td>
+					<td>998.7 Mbytes </td>
+					<td>1011.0 Mbytes </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Daily' Graph (5 Minute -->
+
+<!-- Begin `Weekly' Graph (30 Minute -->
+		<div class="graph">
+			<h2>Gr&aacute;fico semanal (30 minutos : Promedio)</h2>
+			<img src="graficas/mem-swap-week.png" title="week" alt="week" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Utilizada:</th>
+					<td>1093.1 kbytes</td>
+					<td>236.8 kbytes </td>
+					<td>0.0 bytes </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Libre:</th>
+					<td>1011.0 Mbytes </td>
+					<td>697.4 Mbytes </td>
+					<td>0.0 bytes </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Weekly' Graph (30 Minute -->
+
+<!-- Begin `Monthly' Graph (2 Hour -->
+		<div class="graph">
+			<h2>Gr&aacute;fico mensual (2 horas : Promedio)</h2>
+			<img src="graficas/mem-swap-month.png" title="month" alt="month" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Utilizada:</th>
+					<td>1067.2 kbytes</td>
+					<td>198.5 kbytes </td>
+					<td>0.0 bytes </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Libre:</th>
+					<td>1011.0 Mbytes </td>
+					<td>584.6 Mbytes </td>
+					<td>0.0 bytes </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Monthly' Graph (2 Hour -->
+
+<!-- Begin `Yearly' Graph (1 Day -->
+		<div class="graph">
+			<h2>Gr&aacute;fico anual (1 d&iacute;a : Promedio)</h2>
+			<img src="graficas/mem-swap-year.png" title="year" alt="year" />
+			<table>
+				<tr>
+					<th></th>
+					<th scope="col">M&aacute;x</th>
+					<th scope="col">Promedio</th>
+					<th scope="col">Actual</th>
+				</tr>
+				<tr class="in">
+					<th scope="row">&nbsp;Utilizada:</th>
+					<td>281.1 kbytes</td>
+					<td>140.6 kbytes </td>
+					<td>0.0 bytes </td>
+				</tr>
+				<tr class="out">
+					<th scope="row">&nbsp;Libre:</th>
+					<td>452.8 Mbytes </td>
+					<td>226.4 Mbytes </td>
+					<td>452.8 Mbytes </td>
+				</tr>
+			</table>
+		</div>
+<!-- End `Yearly' Graph (1 Day -->
+</td></tr><tr><th>&nbsp;</th></tr></table>	</body>
+</html>
+

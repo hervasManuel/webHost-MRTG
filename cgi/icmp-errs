@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra el porcentaje de paquetes ICMP  Erroneos
+
+errIn=`snmpget -OvQ -v1 -c $2 $1 icmpInErrors.0` 
+
+icmpIn=`snmpget -OvQ -v1 -c $2 $1 icmpInMsgs.0` 
+
+in=`expr $errIn "*" 100`
+
+if [ $icmpIn -gt 0 ]
+then
+    inTotal=`expr $in "/" $icmpIn`
+else
+    inTotal=0
+fi
+
+echo $inTotal
+echo $inTotal
+echo icmp-errs
+echo icmp-errs
+

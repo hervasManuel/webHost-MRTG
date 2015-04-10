@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#
+# Desinstalacion de webHost - MRTG MONITOR en RED HAT
+#
+# Manuel Hervas Ortega - Administracion de Redes de Computadores - UCLM
+# 
+
+
+# Parada de procesos
+
+/sbin/service snmpd stop
+/sbin/service httpd stop
+kill `cat /etc/mrtg/mrtg.pid`
+
+
+## Restauramos los archivos de configuracion
+
+# Configuracion SNMP
+mv -f /etc/snmp/snmpd.conf-bak /etc/snmp/snmpd.conf # Restauramos la Copia de Seguridad
+
+# Configuracion de APACHE
+mv -f /etc/httpd/conf/httpd.conf-bak /etc/httpd/conf/httpd.conf # Restauramos la Copia de Seguridad
+
+# Configuracion de MRTG
+mv -f /etc/mrtg/mrtg.cfg-bak /etc/mrtg/mrtg.cfg # Restauramos la Copia de Seguridad
+
+rm -Rf /var/webHost-MRTG
+
+echo webHost-MRTG se ha desinstalado
+
+

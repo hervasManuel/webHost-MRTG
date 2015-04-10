@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: particion
+
+# Muestra el espacio libre y ocupado del disco duro
+
+# Espacio de disco utilizado en Kb
+du=`snmpget -OvQ -v1 -c $2 $1 dskUsed.$3`
+
+# Espacio de disco libre en Kb
+df=`snmpget -OvQ -v1 -c $2 $1 dskAvail.$3`
+
+du=`expr $du "/" 1024` # espacio en
+df=`expr $df "/" 1024` #   Mbytes
+
+echo $du
+echo $df
+echo disk-info
+echo disk-info

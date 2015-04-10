@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra el tiempo de vida de los paquetes IP actual
+
+ttl=`snmpget -OvQ -v1 -c $2 $1 ipDefaultTTL.0`
+echo $ttl

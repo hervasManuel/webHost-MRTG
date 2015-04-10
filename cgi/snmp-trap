@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra los mensajes SNMP TRAP Enviados y Recibidos
+
+trapIn=`snmpget -OvQ -v1 -c $2 $1 snmpInTraps.0` 
+
+trapOut=`snmpget -OvQ -v1 -c $2 $1 snmpOutTraps.0` 
+
+snmpIn=`snmpget -OvQ -v1 -c $2 $1 snmpInPkts.0` 
+
+snmpOut=`snmpget -OvQ -v1 -c $2 $1 snmpOutPkts.0` 
+
+in=`expr $trapIn "*" 100`
+out=`expr $trapOut "*" 100`
+
+inTotal=`expr $in "/" $snmpIn`
+outTotal=`expr $out "/" $snmpOut`
+
+echo $inTotal
+echo $outTotal
+echo snmp-trap
+echo snmp-trap
+

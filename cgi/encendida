@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Muestra el tiempo que lleva encendida la maquina
+
+tiempo=`snmpget -OvQ -v1 -c public localhost sysUpTime.0` 
+echo $tiempo

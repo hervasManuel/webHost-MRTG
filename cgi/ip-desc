@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra la el porcentaje de paquetes IP descartados
+
+ipIn=`snmpget -OvQ -v1 -c $2 $1 ipInReceives.0` 
+
+ipOut=`snmpget -OvQ -v1 -c $2 $1 ipOutRequests.0`
+
+disIn=`snmpget -OvQ -v1 -c $2 $1 ipInDiscards.0` 
+
+disOut=`snmpget -OvQ -v1 -c $2 $1 ipOutDiscards.0` 
+
+in=`expr $disIn "*" 100`
+out=`expr $disOut "*" 100`
+
+inTotal=`expr $in "/" $ipIn`
+outTotal=`expr $out "/" $ipIn`
+
+echo $inTotal
+echo $outTotal
+echo ip-desc
+echo ip-desc
+

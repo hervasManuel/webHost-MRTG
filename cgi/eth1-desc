@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra la el porcentaje de tramas descartadas de la interfaz
+
+ifIn=`snmpget -OvQ -v1 -c $2 $1 ifInUcastPkts.3` 
+
+ifOut=`snmpget -OvQ -v1 -c $2 $1 ifOutUcastPkts.3` 
+
+disIn=`snmpget -OvQ -v1 -c $2 $1 ifInDiscards.3` 
+
+disOut=`snmpget -OvQ -v1 -c $2 $1 ifOutDiscards.3` 
+
+in=`expr $disIn "*" 100`
+out=`expr $disOut "*" 100`
+
+if [ $ifIn -gt 0 -a $ifOut -gt 0 ]
+then
+    inTotal=`expr $in "/" $ifIn`
+    outTotal=`expr $out "/" $ifOut`
+else
+    inTotal=0
+    outTotal=0;
+fi
+
+echo $inTotal
+echo $outTotal
+echo eth1-desc
+echo eth1-desc
+

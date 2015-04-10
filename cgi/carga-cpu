@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad 
+
+# Muestra la carga del procesador (en %)
+
+# Tiempo de procesos del usuario 
+user=`snmpget -OvQ -v1 -c $2 $1 ssCpuRawUser.0`
+nice=`snmpget -OvQ -v1 -c $2 $1 ssCpuRawNice.0`
+
+# Tiempo de procesos del sistema
+system=`snmpget -OvQ -v1 -c $2 $1 ssCpuRawSystem.0`
+
+# Tiempo inactiva
+idle=`snmpget -OvQ -v1 -c $2 $1 ssCpuRawIdle.0`
+
+# Total
+total=`expr $user + $nice + $system + $idle`
+
+# Total del carga
+parcial=`expr $user + $nice + $system`
+
+parcialX=`expr $parcial "*" 100`
+idleX=`expr $idle "*" 100`
+
+# Porcentaje de Carga
+carga=`expr $parcialX "/" $total`
+
+# Porcentaje de Inactividad
+inactiva=`expr $idleX "/" $total`
+
+echo $carga
+echo $inactiva
+echo carga-cpu
+echo carga-cpu

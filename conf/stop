@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#
+# Parada de webHost - MRTG MONITOR en RED HAT
+#
+# Manuel Hervas Ortega - Administracion de Redes de Computadores - UCLM
+# 
+
+
+# Parada de procesos
+
+/sbin/service snmpd stop
+/sbin/service httpd stop
+kill `cat /etc/mrtg/mrtg.pid`
+
+
+echo webHost-MRTG se ha detenido
+
+

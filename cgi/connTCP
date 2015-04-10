@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: Comunidad
+
+#Obtiene la lista conexiones TCP y su estado
+
+snmptable -CH -v1 -c $2 $1 tcpConnTable | awk '{
+
+if($1 == "closed"){
+  estado="Cerrada"}
+else{if($1 == "listen"){
+     estado="Escuchando"}
+     else{if($1 == "synSent"){estado="Conectando"}
+          else{if($1 == "established"){estado="Establecida"}
+               else{if($1 == "finWait1"){estado="Socket Cerrado/Conexi&oaucute;n Cerrandose"}
+                    else{if($1 == "finWait2"){estado="Socket Cerrandose/Conexi&oaucute;n Cerrada"}
+                         else{if($1 == "closeWait"){estado="Desconectado"}
+                              else{if($1 == "lastAck"){estado="Esperando &Uacute;ltimo ACK"}
+                                   else{if($1 == "closing"){estado="Cerrando"}
+                                        else{if($1 == "timeWait"){estado="Esperando"}
+                                             else{if($1 == "deleteTCB"){estado="Borrando TCB"}
+                                        }
+                                   }
+                               }
+                         }
+                    }
+                }
+            }
+      }
+}
+}
+
+printf("<tr><td align=\"center\">%s</td><td align=\"right\">%s</td><td align=\"right\">%s</td><td align=\"right\">%s</td><td align=\"right\">%s</td></tr>\n",estado,$2,$3,$4,$5,$6)}'
+

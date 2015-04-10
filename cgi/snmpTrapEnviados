@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra los mensajes SNMP TRAP Enviados
+
+items=`snmpget -OvQ -v1 -c $2 $1 snmpOutTraps.0` 
+
+
+echo $items
+

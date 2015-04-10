@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Muestra el tipo de maquina
+
+nombre=`cat /proc/cpuinfo | grep "model name" | awk '{for (i=4; i<=NF; i++) { print $i}}'` 
+echo $nombre

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+# $3: interfaz
+
+# Muestra las tramas descartadas entrada
+
+items=`snmpget -OvQ -v1 -c $2 $1 ifInDiscards.$3` 
+echo $items

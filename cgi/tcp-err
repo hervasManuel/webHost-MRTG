@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+
+# Muestra el porcentaje de segmentos TCP recibidos erroneos
+
+errIn=`snmpget -OvQ -v1 -c $2 $1 tcpInErrs.0` 
+
+tcpIn=`snmpget -OvQ -v1 -c $2 $1 tcpInSegs.0` 
+
+in=`expr $errIn "*" 100`
+
+inTotal=`expr $in "/" $tcpIn`
+
+echo $inTotal
+echo $inTotal
+echo tcp-err
+echo tcp-err
+

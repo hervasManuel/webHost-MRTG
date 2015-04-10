@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# $1: IP maquina
+# $2: comunidad
+# $3: interfaz
+
+# Muestra el estado del interfaz
+
+status=`snmpget -OvQ -v1 -c $2 $1 ifOperStatus.$3` 
+
+case $status in
+    up)       echo Activa;;
+    down)     echo Inactiva;;
+    testing)  echo Comprobando;;
+esac
+

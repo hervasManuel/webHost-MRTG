@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html">
+   <meta http-equiv="content-language" content="es">
+   <link rel="stylesheet" href="style.css" type="text/css">
+   <base target="graficas">
+   <title>Menu</title>
+   	<script type="text/javascript" language="JavaScript">
+   	<!--
+   	if (top == self){top.location.href = '/';}
+   	var x = 300; var y = 1; var now;
+   	
+   	function reload() { window.location.reload(); }
+   	function movein(element){
+   		if (element){
+   			element.style.cursor='pointer';
+   			element.style.cursor='hand';
+   			element.style.backgroundColor='#96C5FF';
+   		}
+   		return true;
+   	}
+   	function moveout(element){
+   		if (element){
+   			element.style.cursor='';
+   			element.style.backgroundColor='White';
+   		}
+   		return true;
+   	}
+   	//-->
+   	</script>
+</head>
+<body>
+   <table width="100%" border="0" cellpadding="4" cellspacing="1">
+     <tr>
+        <th class="normaltext" width="100%" align="center"><b>webHost - MRTG MONITOR</b></th>
+     </tr>
+     <tr>
+     	<td class="smalltext" width="100%" align="center"><img src=images/escudo-inf.gif width="92" height="90" align="absmiddle"></td>
+     </tr>
+	  <tr>
+     	<td class="smalltext" width="100%" align="center">DISE&Nacute;O y GESTI&Oacute;N DE REDES</td>
+     </tr>
+     <tr>
+     	<th class="smalltext" width="100%" align="center"><b>Estado del Sistema </b></th>
+     </tr>
+     <tr>
+     	<td class="smalltext" width="100%" align="left" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='preview-diario.html'"><img src="images/oscilloscope.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Vista Preliminar</td>
+     </tr>
+     <tr>
+        <th class="smalltext" width="100%" align="center"><b>Analisis de CPU</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='carga-cpu.shtml'" align="left"><img src="images/cpu.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Carga CPU</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='tiempo-cpu.shtml'" align="left"><img src="images/cpu.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Tiempo de CPU</td>
+     </tr>
+      <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='procesos.shtml'" align="left"><img src="images/cpu.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Lista de Procesos</td>
+     </tr>
+	  <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='int.shtml'" align="left"><img src="images/cpu.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Interrupciones</td>
+     </tr>
+	  <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='cambio.shtml'" align="left"><img src="images/cpu.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Cambios de Contexto</td>
+     </tr>
+	  <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='user.shtml'" align="left"><img src="images/users.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Usuarios y Procesos</td>
+     </tr>
+     <tr>
+        <th class="smalltext" width="100%" align="center"><b>Analisis de Memoria</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='mem-real.shtml'" align="left"><img src="images/ram.gif" width="35" height="37" align="absmiddle">&nbsp;&nbsp;Utilizaci&oacute;n de RAM</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='mem-swap.shtml'" align="left"><img src="images/swap.gif" width="35" height="36" align="absmiddle">&nbsp;&nbsp;Utilizaci&oacute;n SWAP</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='mem-inout.shtml'" align="left"><img src="images/swap.gif" width="35" height="37" align="absmiddle">&nbsp;&nbsp;Memoria <-> SWAP</td>
+     </tr>
+     <tr>
+        <th class="smalltext" width="100%" align="center"><b>Tr&aacute;fico de Red</b></th>
+     </tr>
+     <tr>
+	  <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='internet.shtml'" align="left"><p><img src="images/lan.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;LAN</td>
+     </tr>
+     <tr>
+      <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='lan.shtml'" align="left"><p><img src="images/globe.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;WiFi LAN</td>  
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='eth0.shtml'" align="left"><p><img src="images/ethernet.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Tr&aacute;fico Ethernet Eth0</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='eth1.shtml'" align="left"><p><img src="images/ethernet.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Tr&aacute;fico Ethernet Wlan0</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='ip.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Tr&aacute;fico IP</td>
+     </tr>
+	  <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='icmp.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Tr&aacute;fico ICMP</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='tcp.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Tr&aacute;fico TCP</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='udp.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Tráfico UDP</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='snmp.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Tr&aacute;fico SNMP</td>
+     </tr>
+	<tr>
+        <th class="smalltext" width="100%" align="center"><b>Interfaz Eth0</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='eth0-err.shtml'" align="left"><img src="images/ethernet-error.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Tramas Erroneas</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='eth0-desc.shtml'" align="left"><img src="images/ethernet-error.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Tramas Descartadas</td>
+     </tr>
+      <tr>
+        <th class="smalltext" width="100%" align="center"><b>Interfaz Wlan0</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='eth1-err.shtml'" align="left"><img src="images/ethernet-error.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Tramas Erroneas</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='eth1-desc.shtml'" align="left"><img src="images/ethernet-error.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Tramas Descartadas</td>
+     </tr>
+
+
+	 <tr>
+        <th class="smalltext" width="100%" align="center"><b>IP</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='ip-dir.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Paquetes Dir. IP Erronea</td>
+     </tr>
+	  <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='ip-desc.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Paquetes Descartados</td>
+     </tr>
+	  <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='ip-cab.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Paquetes Cab. Erronea</td>
+     </tr>
+	  <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='ip-prot.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;Paquetes Prot. Desconocido</td>
+     </tr>
+	 
+	  <tr>
+        <th class="smalltext" width="100%" align="center"><b>ICMP</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='icmp-carga.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Carga de Mensajes ICMP</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='icmp-errs.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Mensajes ICMP Erroneos</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='icmp-err.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Mensajes ICMP de Error</td>
+     </tr>
+ 	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='icmp-dest.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;ICMP Destino Inalcanzable</td>
+     </tr>
+ 	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='icmp-sourc.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;ICMP Falta de Recursos</td>
+     </tr>
+
+	 <tr>
+        <th class="smalltext" width="100%" align="center"><b>TCP</b></th>
+     </tr>
+      <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='tcp-ab.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Conexiones TCP Abiertas</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='connTcp.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Lista de Conexiones TCP</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='tcp-retr.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Segmentos Retransmitidos</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='tcp-err.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Segmentos Erroneos</td>
+     </tr>
+	 <tr>
+        <th class="smalltext" width="100%" align="center"><b>UDP</b></th>
+     </tr>
+      <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='portUdp.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Lista de Puertos UDP</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='udp-port.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Datagramas sin Puerto</td>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='udp-err.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Datagramas Erroneos</td>
+     </tr>
+	 <tr>
+        <th class="smalltext" width="100%" align="center"><b>SNMP</b></th>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='snmp-carga.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Carga de Mensajes SNMP</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='snmp-trap.shtml'" align="left"><img src="images/internet.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Mensajes  SNMP TRAP </td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='snmp-err.shtml'" align="left"><img src="images/internet_error.gif" width="36" height="36" align="absmiddle">&nbsp;&nbsp;Mensajes SNMP Erroneos</td>
+     </tr>
+     <tr>
+        <th class="smalltext" width="100%" align="center"><b>Analisis de Disco</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='disk-info.shtml'" align="left"><img src="images/diskInfo.gif" width="35" height="34" align="absmiddle">&nbsp;&nbsp;Informaci&oacute;n del Disco</td>
+     </tr>
+     <tr>
+        <th class="smalltext" width="100%" align="center"><b>Otros Dispositivos</b></th>
+     </tr>
+   	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='impresoras.shtml'" align="left"><img src="images/inkjet.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Impresoras</td>
+	 </tr>
+	 
+     <tr>
+        <th class="smalltext" width="100%" align="center"><b>Información y Contacto</b></th>
+     </tr>
+     <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='info.html'" align="left"><img src="images/info.gif" width="35" height="36" align="absmiddle">&nbsp;&nbsp;Informaci&oacute;n</td>
+     </tr>
+	 <tr>
+        <td class="smalltext" width="100%" style="cursor:hand;" onMouseOver="movein(this);" onMouseOut="moveout(this);" onClick="parent.graficas.location.href='mailto:hervas.manuel@gmail.com'" align="left"><img src="images/email.gif" width="35" height="35" align="absmiddle">&nbsp;&nbsp;Contacto</td>
+   	<tr>
+   		<th class="smalltext" width="100%" align="center">Universidad de Castilla-La Mancha</th>
+   	</tr>
+   </table>
+   <br>
+</body>
+</html>

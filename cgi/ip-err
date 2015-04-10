@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# $1: IP maquina
+
+# Muestra el porcentaje  de paquetes IP erroneos recibidos
+
+# Paquetes con errores en la cabecera
+hd=`snmpget -OvQ -v1 -c public $1 ipInHdrErrors.0`
+
+# Paquetes con direccion IP distinta de la nuestra 
+addr=`snmpget -OvQ -v1 -c public $1 ipInAddrErrors.0`
+
+# Paquetes recibidos pero descartados por protocolo desconocido
+# o no soportado
+unknown=`snmpget -OvQ -v1 -c public $1 ipInUnknownProtos.0`
+
+# Paquetes recibidos pero descartados durante su procesamiento,
+# por ejemplo insuficiencia del buffer
+discards=`snmpget -OvQ -v1 -c public $1 ipInDiscards.0`
+
+# Paquetes IP recibidos
+receive=`snmpget -OvQ -v1 -c public $1 ipInReceives.0`
+
+error=`expr $discards + $unknown + $addr + $hd`
+errorX=`expr $error "*" 100`
+
+total=`expr $errorX / $receive` 
+echo $total
+echo $total
+echo ip-err
+echo ip-err
